@@ -1,11 +1,11 @@
-const addColor = () => {
+const randomColor = () => {
   const color =
     'rgba(' +
-    Math.round(Math.random() * 255) +
+    Math.round(Math.random() * 111) +
     ',' +
-    Math.round(Math.random() * 255) +
+    Math.round(Math.random() * 111) +
     ',' +
-    Math.round(Math.random() * 255) +
+    Math.round(Math.random() * 111) +
     ',' +
     0.5 +
     ')';
@@ -13,4 +13,4 @@ const addColor = () => {
   return color;
 };
 
-export { addColor };
+export { randomColor };

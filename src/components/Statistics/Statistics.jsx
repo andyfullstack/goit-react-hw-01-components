@@ -1,7 +1,7 @@
 import styles from './Statistics.module.css';
-import { addColor } from '../color/color';
+import { randomColor } from '../color/color';
 
-export default function Statistics({ title, stats }) {
+const Statistics = ({ title, stats }) => {
   return (
     <section className={styles.statistics}>
       {title && <h2 className={styles.title}>{title}</h2>}
@@ -12,7 +12,7 @@ export default function Statistics({ title, stats }) {
             <li
               className={styles.stats}
               key={id}
-              style={{ backgroundColor: addColor() }}
+              style={{ backgroundColor: randomColor() }}
             >
               <span className={styles.label}>{label}</span>
               <span className={styles.percentage}>{percentage}%</span>
@@ -22,4 +22,6 @@ export default function Statistics({ title, stats }) {
       </ul>
     </section>
   );
-}
+};
+
+export default Statistics;
